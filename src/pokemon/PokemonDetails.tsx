@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { AppBar, Toolbar, IconButton, Typography, Container, Box, Button, Badge } from '@mui/material';
+import React, { useContext } from 'react';
+import { AppBar, Toolbar, IconButton, Typography, Container, Box, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { PokemonDetail } from './interfaces/PokemonDetails';
 import { getPokemonsDetails } from './services/getPokemonsDetails';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';

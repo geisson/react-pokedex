@@ -1,30 +1,16 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { PokemonDetail } from '../pokemon/interfaces/PokemonDetails';
-import { getPokemonsDetails } from '../pokemon/services/getPokemonsDetails';
-import { listPokemons, PokemonListInterface } from '../pokemon/services/listPokemons';
+import React, { useContext } from 'react';
+import { listPokemons } from '../pokemon/services/listPokemons';
 
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import {
-  Badge,
-  Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CircularProgress,
-  Container,
-  Grid,
-  LinearProgress,
-} from '@mui/material';
+import { Badge, Box, Button, CircularProgress, Container, Grid, LinearProgress } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { log } from 'console';
 import PokedexCard from './components/PokedexCard';
 import { useQuery } from '@tanstack/react-query';
-import { Delete, Favorite } from '@mui/icons-material';
+import { Favorite } from '@mui/icons-material';
 import { FavoriteContext } from '../favorites/contexts/FavoriteContext';
 
 interface PokedexProps {}

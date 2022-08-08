@@ -5,19 +5,14 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Badge, Box, Button, CircularProgress, Container, Grid, LinearProgress } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
-import { Favorite } from '@mui/icons-material';
+import { Container, Grid } from '@mui/material';
 import PokedexCard from '../../pokedex/components/PokedexCard';
-import { listPokemons } from '../../pokemon/services/listPokemons';
 import { FavoriteContext } from './FavoriteContext';
 
 interface FavoritesScreenProps {}
 
 const FavoritesScreen: React.FC<FavoritesScreenProps> = () => {
   const { favorites } = useContext(FavoriteContext);
-  const navigate = useNavigate();
 
   return (
     <div>
